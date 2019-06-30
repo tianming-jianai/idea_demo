@@ -1,0 +1,38 @@
+/target
+
+/.settings
+/.peoject
+/.classpath
+/.springBeans
+# Maven
+target/
+release.properties
+
+# Eclipse
+.classpath
+.project
+.externalToolBuilders/
+.metadata
+.settings
+
+# IntelliJ
+*.iml
+*.ipr
+*.iws
+.idea/
+out/
+
+# Mac
+.DS_Store
+/bin/
+/bs_ssm.sql
+/production_ssm文档.pdf
+/README.md
+### Example user template template
+### Example user template
+
+# IntelliJ project files
+.idea
+*.iml
+out
+gen
