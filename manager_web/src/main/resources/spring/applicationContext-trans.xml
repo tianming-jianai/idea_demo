@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tx="http://www.springframework.org/schema/cache"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/cache http://www.springframework.org/schema/cache/spring-cache.xsd http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+    <import resource="applicationContext-dao.xml"/>
+    <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource" ref="dataSource"/>
+    </bean>
+
+    <!--配置事务传播行为：其实就是那些方法应该受什么样的事务控制-->
+    <!--<tx:advice id="txAdvice" transaction-manager="transactionManager">
+        <tx:attributes>
+            <tx:method name="add*" propagation="RE@UIRED" />
+            <tx:method name="modify*" propagation="RE@UIRED" />
+            <tx:method name="update*" propagation="RE@UIRED" />
+            <tx:method name="drop*" propagation="RE@UIRED" />
+            <tx:method name="del*" propagation="RE@UIRED" />
+            <tx:method name="find*" read-only="true" />
+        </tx:attributes>
+    </tx:advice>-->
+    <!--那些类下的方法需要参与到当前的事务管理中。配置切点-->
+   <!-- <aop:config>
+        <aop:advisor advice-ref="txAdvice" pointcut="execution(* com.hkd.service.* *(*)"/>
+    </aop:config>-->
+</beans>
