@@ -9,12 +9,12 @@
     </settings>
 
     <!--配置分页插件-->
-    <plugins>
+   <!-- <plugins>
         <plugin interceptor="com.github.pagehelper.PageHelper">
-            <!--数据库方言-->
+            &lt;!&ndash;数据库方言&ndash;&gt;
             <property name="dialect" value="mysql"/>
-            <!--设置为true时RowBounds分页会进行count查询，会去查询总数-->
+            &lt;!&ndash;设置为true时RowBounds分页会进行count查询，会去查询总数&ndash;&gt;
             <property name="rowBoundsWithCount" value="true"/>
         </plugin>
-    </plugins>
+    </plugins>-->
 </configuration>

@@ -8,6 +8,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
+import java.util.List;
+
 /**
  * @Author: 张世罡
  * @Date： 2019/7/1
@@ -27,5 +29,14 @@ public class ManagerTest {
         users.setUserage(20);
         users.setUsername("admin");
         this.usersMapper.insertUsers(users);
+    }
+
+    @Test
+    public void selectUserTest(){
+        List<Users> users = this.usersMapper.selectUsers();
+        for(Users u:users){
+            System.out.println("usernaem:"+u.getUsername());
+        }
+
     }
 }
